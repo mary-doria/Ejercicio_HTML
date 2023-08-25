@@ -133,8 +133,123 @@
             <h3><span class="mw-headline" id="Etiquetas_Basicas">Etiquetas HTML básicas</span></h3>
             <p>
                 <ul>
+                    <li><mark class="gris"><code>&lt;html&gt;</code></mark>: define el inicio del documento HTML, le indica al navegador que lo<br>
+                    que viene a continuación debe ser interpretado como código HTML. Esto es así<br>
+                    de facto, ya que en teoría lo que define el tipo de documento es el DOCTYPE, <br>
+                    que significa la palabra justo tras DOCTYPE el tag de raíz.</li> <br>
+
+                    <li><mark class="gris"><code>&lt;script&gt;</code></mark>: incrusta un script en una web, o llama a uno mediante <mark class="gris"><code>src="url del <br>
+                    script"</code></mark>. Se recomienda incluir el tipo MIME en el<br>
+                    atributo <mark class="gris"><code>type</code></mark>, en el caso de JavaScript <mark class="gris"><code>text/javascript</code></mark>.</li><br>
+
+                    <li><mark class="gris"><code>&lt;head&gt;</code></mark>: define la cabecera del documento HTML; esta cabecera suele <br>
+                    contener información sobre el documento que no se muestra directamente al<br>
+                    usuario como, por ejemplo, el título de la ventana del navegador. Dentro de<br>
+                    la cabecera  <mark class="gris"><code>&lt;head&gt;</code></mark> es posible encontrar:<br>
                     
+                    <ul>
+                        <li><mark class="gris"><code>&lt;title&gt;</code></mark>: define el título de la página. Por lo general, el título<br>
+                        aparece en la barra de título encima de la ventana.</li><br>
+
+                        <li><mark class="gris"><code>&lt;link&gt;</code></mark>: para vincular el sitio a hojas de estilo o iconos. Por<br>
+                        ejemplo:<code>&lt;link rel="stylesheet" href="/style.css" type="text/css"&gt;</code>.<br>
+
+                        <li><mark class="gris"><code>&lt;style&gt;</code></mark>: para colocar el estilo interno de la página; ya sea<br>
+                        usando CSS u otros lenguajes similares. No es necesario<br>
+                        colocarlo si se va a vincular a un archivo externo usando la etiqueta<code>&lt;link&gt;</code><br>
+
+                        <li><mark class="gris"><code>&lt;meta&gt;</code></mark>: para metadatos como la autoría o la licencia, incluso<br>
+                        para indicar parámetros http (mediante http-equiv="")<br>
+                        cuando no se pueden modificar por no estar disponible la<br>
+                        configuración o por dificultades con server-side scripting.<br>
+
+                        <li><mark class="gris"><code>&lt;body&gt;</code></mark>:define el contenido principal o cuerpo del documento. Esta es la<br>
+                        parte del documento html que se muestra en el navegador; dentro de esta<br>
+                        etiqueta pueden definirse propiedades comunes a toda la página, como color<br>
+                        de fondo y márgenes. Dentro del cuerpo <code>&lt;body&gt;</code> es posible encontrar<br>
+                        numerosas etiquetas. A continuación se indican algunas a modo de ejemplo<br>
+
+                        <li><mark class="gris"><code>&lt;article&gt;</code></mark> Representa una composición auto-contenida en un<br>
+                        documento, página, una aplicación o en el sitio, que se destina a<br>
+                        distribuir de forma independiente o re-utilizable.<br>
+
+                        <li><mark class="gris"><code>&lt;h1&gt;</code></mark> a <li><mark class="gris"><code>&lt;h6&gt;</code></mark> encabezados o títulos del documento con diferente<br>
+                        relevancia.<br>
+
+                        <li><mark class="gris"><code>&lt;table&gt;</code></mark> : define una tabla <br>
+                            <ul>
+                                <li><mark class="gris"><code>&lt;tr&gt;</code></mark>fila de una tabla <br>
+                                <li><mark class="gris"><code>&lt;td&gt;</code></mark>celda de una tabla (debe estar dentro de una <br>
+                                fila).
+                            </ul>
+
+                        <li><mark class="gris"><code>&lt;footer&gt;</code></mark> :representa el pie de un documento o sección. La<br>
+                        información que se suele añadir en este bloque es el autor del<br>
+                        documento, enlaces a contenido relacionado, información de<br>
+                        copyright, avisos legales, etc.<br>
+
+                        <li><mark class="gris"><code>&lt;a&gt;</code></mark> hipervínculo o enlace, dentro o fuera del sitio web. Debe <br>
+                        definirse el parámetro de pasada por medio del atributo href. Por <br>
+                        ejemplo: <mark class="gris"><code>&lt;a&nbsp;href="http://www.example.com" <br>
+                        title="Ejemplo" target="_blank" tabindex="1" <br>
+                        &gt;Ejemplo&lt;/a&gt;</code></mark> se representa como ejemplo. <br>
+
+                        <li><mark class="gris"><code>&lt;div&gt;</code></mark> :división de la página. Se recomienda, junto con css, en<br>
+                        vez de <mark class="gris"><code>&lt;div&gt;</code></mark> cuando se desea alinear contenido.<br>
+
+                        <li><mark class="gris"><code>&lt;img&gt;</code></mark>imagen. Requiere del atributo src, que indica la ruta en la<br>
+                        que se encuentra la imagen. Por ejemplo <li><mark class="gris"><code>&lt;img src="./imágenes/mifoto.jpg" /&gt;</code></mark><br>
+                        Es conveniente, por accesibilidad, poner un atributo  <code>alt="texto alternativo"</code><br>
+
+                        <li><mark class="gris"><code>&lt;ol&gt;</code></mark>: etiqueta para listas ordenadas. <br>
+
+                        <li><mark class="gris"><code>&lt;ul&gt;</code></mark>: etiqueta para listas desordenadas. <br>
+
+                        <li><mark class="gris"><code>&lt;li&gt;</code></mark>: etiqueta elementos de una lista. <br>
+
+                        <li><mark class="gris"><code>&lt;b&gt;</code></mark>: texto en negrita (<i>etiqueta desaprobada. Se recomienda usar la etiqueta <code>&lt;strong&gt;</code></i>). <br>
+
+                        <li><mark class="gris"><code>&lt;i&gt;</code></mark>: texto en cursiva (<i>etiqueta desaprobada. Se recomienda usar la etiqueta <code>&lt;em&gt;</code></i>). <br>
+
+                        <li><mark class="gris"><code>&lt;s&gt;</code></mark>: texto tachado (<i>etiqueta desaprobada. Se recomienda usar la etiqueta <code>&lt;del&gt;</code></i>). <br>
+
+                        <li><mark class="gris"><code>&lt;u&gt;</code></mark> : Antes texto subrayado. A partir de HTML 5 define porciones <br>
+                        de texto diferenciadas o destacadas del resto, para indicar <br>
+                        correcciones por ejemplo (etiqueta desaprobada en HTML 4.01 y <br>
+                        redefinida en HTML 5). <br>
+
+                        <li><mark class="gris"><code>&lt;main&gt;</code></mark>: división estructural de la página que engloba el <br>
+                        contenido principal de la misma. Dentro de esta etiqueta, por <br>
+                        ejemplo, encontramos los <mark class="gris"><code>&lt;article&gt;</code></mark>. <br>
+
+                        <li><mark class="gris"><code>&lt;span&gt;</code></mark>: Sirve para diferenciar un texto de otro. <br>
+
+                        <li><mark class="gris"><code>&lt;br&gt;</code></mark>: Sirve para provocar un salto de línea. Esta etiqueta no se <br>
+                        cierra. <br>
+
+                        <li><mark class="gris"><code>&lt;hr&gt;</code></mark>: Sirve para provocar un cambio de tema entre párrafos. <br>
+                        Esta etiqueta no se cierra. <br>
+
+                        <li><mark class="gris"><code>&lt;details&gt;</code></mark>: Sirve para crear una sección desplegable <br>
+
+                        <li><mark class="gris"><code>&lt;summary&gt;</code>&nbsp;</mark>: Sirve para crear el título de la sección desplegable <br>
+
+                    </ul>
                 </ul>
+                <p>
+                    La mayoría de etiquetas deben cerrarse como se abren, pero con una barra ( / ) <br>
+                    tal como se muestra en los siguientes ejemplos: <br>
+
+                    <ul>
+                        <li><mark class="gris"><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Contenido de una celda&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></mark> <br>
+
+                        <li><mark class="gris"><code>&lt;script&gt;Código de un script integrado en la <br>
+                        página&lt;/script&gt;</code></mark> <br>
+
+                        <li><mark class="gris"><code>&lt;header&gt;División estructural en la parte del <br>
+                        contenido.&lt;/header&gt;</code> </mark> <br>
+                    </ul>
+                </p>
             </p>
         </article>
 
